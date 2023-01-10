@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/update-task/{id} (id = ${id})}" method="post">
+    <table border="1px">
+        <tr>
+            <td th:text="${id}">
+                <label>Id</label>
+                <label>
+                    <input type="number" name="id">
+                </label>
+            </td>
+
+            <td>
+                <label>Priority</label>
+                <label>
+                    <input type="number" name="priority">
+                </label>
+            </td>
+
+            <td>
+                <label>Description</label>
+                <label>
+                    <input type="text" name="description">
+                </label>
+            </td>
+            <td>
+                <input type="submit" value="save">
+            </td>
+
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>
